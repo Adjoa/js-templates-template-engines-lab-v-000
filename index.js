@@ -6,11 +6,11 @@ function createPost() {
   var postTemplateFn = _.template(postTemplate);
   var postTemplateHTML = postTemplateFn({content: 'postContent', author: 'postAuthor'});
   var post = postTemplateHTML.innerHTML
-  
+
   var pageTemplate = document.getElementById("page-template").innerHTML;
   var pageTemplateFn = _.template(pageTemplate);
   var pageTemplateHTML = pageTemplateFn({post: 'postFromTemplate'});
-  
+
 
   var pageDiv = document.getElementById("page");
   pageDiv.innerHTML += pageTemplateHTML;
