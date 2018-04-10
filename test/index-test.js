@@ -9,8 +9,10 @@ describe('index', () => {
 
   describe('functions', () => {
     before(() => {
-      // window._ = require('lodash')
-      var _ = require('lodash');
+      //When doing ._ calls lodash, defined globally
+      global._ = _;
+      window._ = require('lodash')
+      // var _ = require('lodash');
     })
 
     describe('createPost', () => {
