@@ -3,14 +3,15 @@ function createPost() {
   var postAuthor = document.getElementById("postAuthor").value;
 
   var postTemplate = document.getElementById("post-template").innerHTML;
+  var postTemplateFn = _.template(postTemplate);
+  var postTemplateHTML = postTemplateFn({content: 'postContent', author: 'postAuthor'});
+  var post = postTemplateHTML.innerHTML
+  
+  var pageTemplate = document.getElementById("page-template").innerHTML;
+  var pageTemplateFn = _.template(pageTemplate);
+  var pageTemplateHTML = pageTemplateFn({post: 'postFromTemplate'});
+  
 
-  //create template function
-  var templateFn = _.template(postTemplate);
-
-  //execute template function with JSON object for the interpolated values
-  var templateHTML = templateFn({content: 'postContent', author: 'postAuthor'});
-
-  var commentsDiv = document.getElementById("comments");
-  //append rather than replace!
-  commentsDiv.innerHTML += templateHTML;
+  var pageDiv = document.getElementById("page");
+  pageDiv.innerHTML += pageTemplateHTML;
 }
