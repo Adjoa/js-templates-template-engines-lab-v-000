@@ -30,8 +30,10 @@
       </article>
     </script>
     <script id="comments-template" type="text/text/x-lodash-template">
-      <p><%- comment %></p>
-      <p><span>Posted by:</span><%- commenter %></p>
+      <div id="comments">
+        <p><%- comment %></p>
+        <p><span>Posted by:</span><%- commenter %></p>
+      </div>
     </script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
