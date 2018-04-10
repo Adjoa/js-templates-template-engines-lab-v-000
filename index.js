@@ -5,7 +5,7 @@ function createPost() {
   var postTemplate = document.getElementById("post-template").innerHTML;
   var postTemplateFn = _.template(postTemplate);
   var postTemplateHTML = postTemplateFn({content: 'postContent', author: 'postAuthor'});
-  var post = postTemplateHTML.innerHTML
+  var postFromTemplate = postTemplateHTML.innerHTML
 
   var pageTemplate = document.getElementById("page-template").innerHTML;
   var pageTemplateFn = _.template(pageTemplate);
