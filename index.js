@@ -11,6 +11,7 @@ function createPost() {
   var pageTemplateFn = _.template(pageTemplate);
   var pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML});
 
+
   var pageDiv = document.getElementById("page");
   pageDiv.innerHTML += pageTemplateHTML;
 }
