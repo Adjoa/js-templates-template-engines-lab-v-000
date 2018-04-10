@@ -9,7 +9,7 @@ function createPost() {
 
   var pageTemplate = document.getElementById("page-template").innerHTML;
   var pageTemplateFn = _.template(pageTemplate);
-  var pageTemplateHTML = pageTemplateFn({post: 'postFromTemplate'});
+  var pageTemplateHTML = pageTemplateFn({post: 'postTemplateHTML'});
 
 
   var pageDiv = document.getElementById("page");
