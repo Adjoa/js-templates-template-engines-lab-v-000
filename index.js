@@ -28,5 +28,5 @@ function postComment() {
   var commentsTemplate = document.getElementById("comments-template").innerHTML;
   var commentsTemplateFn = _.template(commentsTemplate);
   var commentsTemplateHTML = commentsTemplateFn({'commentBody': commentTemplateHTML})
-  
+
 }
