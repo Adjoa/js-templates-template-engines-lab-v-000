@@ -12,16 +12,7 @@
       </form>
       <div id="page">
       </div>
-      <script id="comments-template" type="text/x-lodash-template">
-        <form onsubmit="postComment(); return false;" id="comments-form" >
-          <input type="textarea" id="commentContent" placeholder="Add some comment...">
-          <p>Author: <input type="text" id="commentAuthor"></p>
-          <input type="submit">
-        </form>
-        <div id="comments">
-          <%= commentBody %>
-        </div>
-      </script>
+      
     </main>
     <script src="node_modules/lodash/lodash.min.js"></script>
     <script src="index.js"></script>
@@ -38,6 +29,16 @@
         <p><%- content %></p>
         <footer><%- author %></footer>
       </article>
+    </script>
+    <script id="comments-template" type="text/x-lodash-template">
+      <form onsubmit="postComment(); return false;" id="comments-form" >
+        <input type="textarea" id="commentContent" placeholder="Add some comment...">
+        <p>Author: <input type="text" id="commentAuthor"></p>
+        <input type="submit">
+      </form>
+      <div id="comments">
+        <%= commentBody %>
+      </div>
     </script>
     <script id="comment-template" type="text/x-lodash-template">
       <div id="comments">
