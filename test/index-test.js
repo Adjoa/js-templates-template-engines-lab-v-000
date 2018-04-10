@@ -9,7 +9,8 @@ describe('index', () => {
 
   describe('functions', () => {
     before(() => {
-      window._ = require('lodash')
+      // window._ = require('lodash')
+      var _ = require('lodash');
     })
 
     describe('createPost', () => {
